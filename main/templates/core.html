@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%%load static}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{%static 'CSS/style.css'%}"
+    <script src="{%static 'JS/main.js%}"></script>
+</head>
+<body>
+    <div>
+        <div>
+            <div>
+                <a href="/">Home</a>
+                <a href="/about">About Us</a>
+                <a href="/contact">Contact Us</a>
+                <a href="/form">User Form</a>
+                <a href="/student_data_list">Students List</a>
+                <a href="/products_list">Products</a>
+                <a href="/Register">Register</a>
+                <a href="loging">Loging</a>
+            </div>
+            <div>
+                <h4>Top Company</h4>
+            </div>
+            <hr>
+        </div>
+
+        <div>
+            <!-- place holder for each pages individual html -->
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div>
+            <img id="shoes" src="{%static 'images/shoes.jpn' %}"
+        </div> 
+
+        <div>
+            <hr>
+            <p>Footer</p>
+        </div>
+    </div>
+</body>
+</html>

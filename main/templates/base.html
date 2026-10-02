@@ -1,0 +1,51 @@
+{%load static%}
+<!--The previus note is avoid error when loading css-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title %} My  Django Website {%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'main/style.css'%}">
+    <script src="{% static 'main/js/main.js'%}"></script>
+</head>
+<body>
+    
+<!--Nav based on assingment requirement-->
+<nav>
+    <a href="/">Home</a>
+    <a href="/about/">About Us</a>
+    <a href="/contact/">Contact Us</a>
+    <a href="/student/add/">Add student</a>
+    <a href="/student/list/">Students</a>
+    <a href="/product/list/">Products</a>
+
+    {%if user.is_authenticated%}
+        <a href="/logout">Logout</a>
+
+    {%else%}
+        <a href="Login.html">Login</a>
+
+    {%endif%}
+    
+   
+
+</nav>
+
+<hr>
+
+
+
+<main>
+    {%block content%}
+    {%endblock%}
+
+</main>
+<hr>
+
+
+<footer>
+    <p> 2026 London School board . All rights reserved. Hanner Palacios - CBC</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{%block title %} Register {%endblock%}
+
+{%block content%}
+ 
+<h2>Student Registration Form</h2>
+
+<form action="/register/" method ="post">
+    {%csrf_token%}
+
+   
+    <input type="text" name="username" placeholder="User Name">
+
+  
+    <input type="password" name="password" placeholder="Password">
+
+    
+    <input type="text" name="f_name" placeholder="User First Name ">
+
+     
+    <input type="text" name="l_name" placeholder=" User Last Name">
+
+    
+    <button type="submit">Send!</button>
+
+</form>
+
+{%endblock%}

@@ -1,0 +1,25 @@
+{%extends "base.html"%}
+
+{%block title %} Student List {%endblock%}
+
+{%block content %}
+
+<h2>Registered Students</h2>
+
+{%for student in students%}
+
+<h3>{{student.student_name}}</h3>
+<p>Age: {{student.student_age}}</p>
+<p>City: {{student.student_city}}</p>
+<p>Email: {{student.student_email}}</p>
+<p>Phone: {{student.student_phone}}</p>
+<p>Subject: {{student.student_subject}}</p>
+<p>Grade: {{student.student_grade}}</p>
+<p>Hobby: {{student.student_hobby}}</p>
+<p>Address: {{student.student_address}}</p>
+<p>Enrollment Year: {{student.enrollment_year}}</p>
+<hr>
+{%endfor%}
+{%endblock%}
+
+
